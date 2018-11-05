@@ -36,7 +36,7 @@ class SongsController < ApplicationController
   end
 
   def create
-    #binding.pry
+    binding.pry
     @song = Song.new(song_params)
 
     if @song.save
@@ -47,7 +47,7 @@ class SongsController < ApplicationController
   end
 
   def edit
-    binding.pry
+
     if params[:artist_id]
       @artist = Artist.find_by(id: params[:artist_id])
       if @artist.nil?
